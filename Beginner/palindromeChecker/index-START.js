@@ -6,10 +6,21 @@ e.g palindromeChecker('racecar') // will return true
 
 
 
-function palindromeChecker(text) {
-    v// Code goes here
+// function palindromeChecker(text) {
+//     return text.toLowerCase() === text.toLowerCase().split('').reverse().join('');
+// }
+
+// function palindromeChecker(text) {
+//     let size = Math.floor(text.length);
+//     for(let i=0; i<size; i++){
+//         if (text[i]!==text[text.length-i-1])
+//             return false;
+//     }
+//     return true;        
+// }
+
+function palindromeChecker(text){
+    let charArray = text.toLowerCase().split('');
+    return charArray.every((letter, index)=> letter === charArray[charArray.length - index - 1]);
 }
-
-
-
 module.exports = palindromeChecker;
