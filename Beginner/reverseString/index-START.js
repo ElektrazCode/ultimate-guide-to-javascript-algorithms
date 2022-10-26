@@ -42,3 +42,7 @@ function reverseString(text) {
 
 
 module.exports = reverseString
+
+/**
+ * Performance -- Best to worst: .reduce, for..of , recursion, chaining methods
+ */
