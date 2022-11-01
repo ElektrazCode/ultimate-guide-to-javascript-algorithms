@@ -5,9 +5,23 @@ E.g reverseString('algorithms') // should return 'smhtirogla'
 
 
 
+// function longestWord(text) {
+//     let longest = '';
+//     text.split(' ').forEach((word) => {
+//         if (longest.length < word.length)
+//             longest = word;
+//     });
+//     return longest;
+// }
+
 function longestWord(text) {
-    // Code goes here
+    const words = text.split(' ').sort((a,b) => a.length - b.length);
+    return words[words.length-1];
 }
 
 
 module.exports = longestWord
+
+/**Performance: fastest = forEach & reduce -> .sort()
+ * 
+ */
