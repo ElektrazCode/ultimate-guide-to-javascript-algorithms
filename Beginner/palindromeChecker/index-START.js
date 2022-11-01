@@ -23,4 +23,10 @@ function palindromeChecker(text){
     let charArray = text.toLowerCase().split('');
     return charArray.every((letter, index)=> letter === charArray[charArray.length - index - 1]);
 }
+
+
 module.exports = palindromeChecker;
+
+/**Performance: fastest = optmizied for loop (1/2) -> .every -> .reverse() 
+ * 
+ */
