@@ -9,7 +9,7 @@ For words that begin with vowel sounds, simply add "way" to the end of the word.
 "explain" = "explainway”
 */
 
-
+//Imperative Approach
 
 function pigLatin(text){
     let result = '';
@@ -24,6 +24,7 @@ function pigLatin(text){
     return result;
 }
 
+//Declarative Approach
 
 // function pigLatin(str) {
 //     return str
@@ -33,6 +34,6 @@ function pigLatin(text){
 
 module.exports = pigLatin;
 
-/**Performance:  
+/**Performance:  Imperative Approach is faster
  * 
  */
