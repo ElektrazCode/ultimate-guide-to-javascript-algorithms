@@ -9,11 +9,16 @@ than 1(index 0), but less than 2(index 1).
 
 
 
-function whereIBelong(arr, num) {
-   // Code goes here
+// function whereIBelong(arr, num) {
+//    if (!arr[0] || arr[0]>num)
+//       return 0;
+//    return  arr.reduce((index, el, i)=> (num>el && (!arr[i+1] || num<=arr[i+1])) ? i+1 : index, -1);
+// }
 
+function whereIBelong(arr, num) {
+   arr.push(num);
+   return arr.sort((a,b) => a-b).indexOf(num);
 }
 
-
-
+/**Performance: implementing a for loop to count all the smaller values will be the fastest approach */
 module.exports = whereIBelong
