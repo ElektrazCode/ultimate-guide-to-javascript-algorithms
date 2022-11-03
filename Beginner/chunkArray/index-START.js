@@ -43,4 +43,6 @@ function chunkArray(array, size){
     return [array.slice(0, size), ...chunkArray(array.slice(size), size)];
 }
 
+/**Performace: Using .slice is the fastest approach followed by the recursive approach */
+
 module.exports = chunkArray
